@@ -1,0 +1,63 @@
+{
+	"name": "covig-front",
+	"version": "0.1.0",
+	"description": "Coivd19 API를 사용하여 코로나 확진자 정보를 제공하는 웹 서비스",
+	"main": "index.js",
+	"homepage": "",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/po4tion/covig-front"
+	},
+	"author": {
+		"name": "po4tion",
+		"email": "po4tion0429@gmail.com",
+		"url": "https://github.com/po4tion"
+	},
+	"contributors": [
+		{
+			"name": "kkh2826",
+			"email": "kkh2826@naver.com",
+			"url": "https://github.com/kkh2826"
+		}
+	],
+	"bugs": {
+		"url": "https://github.com/po4tion/covig-front/issues"
+	},
+	"private": true,
+	"dependencies": {
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-scripts": "5.0.0",
+		"web-vitals": "^2.1.0"
+	},
+	"devDependencies": {
+		"eslint": "^8.10.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-react": "^7.29.3",
+		"prettier": "^2.5.1"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"lint": "eslint --ext .js,.jsx src",
+		"prettier": "prettier --write ./src/**/*.js",
+		"prettier-check": "prettier --check ./src/**/*.js"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version"
+		]
+	}
+}
