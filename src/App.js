@@ -1,12 +1,8 @@
 import './App.css';
-import { Box } from '@chakra-ui/react';
+import { Main } from './pages';
 
 function App() {
-	return (
-		<Box bg="tomato" w="100%" p={4} color="white">
-			This is the Box
-		</Box>
-	);
+	return <Main />;
 }
 
 export default App;
