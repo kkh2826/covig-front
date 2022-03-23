@@ -1,12 +1,12 @@
 /* eslint-disable no-undef */
-import { Center, Text } from '@chakra-ui/react';
+import { Center, Heading } from '@chakra-ui/react';
 
 function AppName() {
 	return (
 		<Center>
-			<Text fontSize="6xl" fontWeight={700} userSelect="none">
+			<Heading as="h1" size="3xl" userSelect="none">
 				{process.env.REACT_APP_NAME}
-			</Text>
+			</Heading>
 		</Center>
 	);
 }
