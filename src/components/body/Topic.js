@@ -3,7 +3,7 @@ import { RepeatIcon } from '@chakra-ui/icons';
 
 function Topic() {
 	return (
-		<Center border="1px" borderColor="gray.400" mb={6}>
+		<Center mb={10}>
 			<Heading as="h2" size="lg">
 				국내 감염 현황
 			</Heading>
