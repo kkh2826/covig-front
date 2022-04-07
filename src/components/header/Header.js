@@ -1,6 +1,5 @@
-import { AppName, SelectLanguage } from './index';
+import { AppName, SelectLanguage, ColorModeSwitcher } from './index';
 import { Box, Flex } from '@chakra-ui/react';
-import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 
 function Header() {
 	return (
