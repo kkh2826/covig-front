@@ -1,5 +1,6 @@
-import { AppName, LightSwitch, SelectLanguage } from './index';
+import { AppName, SelectLanguage } from './index';
 import { Box, Flex } from '@chakra-ui/react';
+import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 
 function Header() {
 	return (
@@ -9,7 +10,7 @@ function Header() {
 			</Flex>
 			<Flex justify="space-between">
 				<AppName />
-				<LightSwitch />
+				<ColorModeSwitcher />
 			</Flex>
 		</Box>
 	);

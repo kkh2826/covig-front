@@ -7,7 +7,7 @@ function Topic() {
 			<Heading as="h2" size="lg">
 				국내 감염 현황
 			</Heading>
-			<RepeatIcon ml={1} />
+			<RepeatIcon ml={2} />
 		</Center>
 	);
 }

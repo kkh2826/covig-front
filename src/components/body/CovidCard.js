@@ -8,6 +8,9 @@ import {
 	HStack,
 	Icon,
 	Text,
+	Stat,
+	StatHelpText,
+	StatArrow,
 } from '@chakra-ui/react';
 
 function CovidCard({ title, total, addition, icon }) {
@@ -45,9 +48,14 @@ function CovidCard({ title, total, addition, icon }) {
 							+40%
 						</CircularProgressLabel>
 					</CircularProgress>
-					<Text fontSize="2xl" fontWeight={600} color="#FF0000">
-						+{addition.toLocaleString('ko-KR')}
-					</Text>
+					<Flex>
+						<Stat>
+							<StatHelpText fontSize={'xl'}>
+								<StatArrow type="increase" />
+								{addition.toLocaleString('ko-KR')}
+							</StatHelpText>
+						</Stat>
+					</Flex>
 				</Flex>
 			</HStack>
 		</Container>
