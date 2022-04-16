@@ -17,7 +17,8 @@ function Body() {
 	}, []);
 
 	const card = (type) => {
-		const covidData = data[0][calculateDate()];
+		const store = data[0];
+		const covidData = store[calculateDate()];
 
 		if (type === 'decide') {
 			return (

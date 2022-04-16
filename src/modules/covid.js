@@ -5,6 +5,7 @@ import createRequestThunk from '../lib/createRequestThunk';
 
 const GET_COVIDBASICINFO = 'covid/GET_COVIDBASICINFO';
 const GET_COVIDBASICINFO_SUCCESS = 'covid/GET_COVIDBASICINFO_SUCCESS';
+const GET_COVIDBASICINFO_FAILURE = 'covid/GET_COVIDBASICINFO_FAILURE';
 
 export const getCovidBasicInfo = createRequestThunk(
 	GET_COVIDBASICINFO,
@@ -19,6 +20,10 @@ const initialState = {
 const covid = handleActions(
 	{
 		[GET_COVIDBASICINFO_SUCCESS]: (state, action) => ({
+			...state,
+			covidBasicInfo: action.payload,
+		}),
+		[GET_COVIDBASICINFO_FAILURE]: (state, action) => ({
 			...state,
 			covidBasicInfo: action.payload,
 		}),
