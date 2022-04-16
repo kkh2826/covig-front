@@ -37,13 +37,16 @@ function CovidCard({ title, total, addition, icon }) {
 		);
 	};
 
+	/**
+	 ** percentage graph 비율 30 곱셈
+	 */
 	const progress = () => {
 		const percentage = ((addition / (total - addition)) * 100).toFixed(2);
 
 		return (
 			<CircularProgress
-				value={percentage}
-				color={title === '전체 누적 확진자' ? 'red.500' : 'black'}
+				value={percentage * 30}
+				color={title === '전체 누적 확진자' ? 'red.500' : '#504DFF'}
 				size={'2.5em'}
 			>
 				<CircularProgressLabel fontSize={'lg'} fontWeight={700}>
@@ -61,11 +64,11 @@ function CovidCard({ title, total, addition, icon }) {
 				<Stat>
 					<StatHelpText
 						fontSize={'xl'}
-						color={title === '전체 누적 확진자' ? 'red.500' : ''}
+						color={title === '전체 누적 확진자' ? 'red.500' : '#504DFF'}
 					>
 						<StatArrow
 							type="increase"
-							color={title === '전체 누적 확진자' ? '' : 'black'}
+							color={title === '전체 누적 확진자' ? 'red.500' : '#504DFF'}
 						/>
 						{extAddition}
 					</StatHelpText>
