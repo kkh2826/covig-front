@@ -8,7 +8,6 @@ function createRequestThunk(type, request) {
 		dispatch(startLoading(type));
 		try {
 			const response = await request(params);
-			console.log('response:' + response);
 			const payload = await response.data;
 
 			dispatch({

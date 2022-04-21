@@ -6,7 +6,7 @@ import { FaVirus } from 'react-icons/fa';
 import { GiDeadWood } from 'react-icons/gi';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCovidBasicInfo } from '../../modules/covid';
-import { calculateDate } from '../../lib';
+import { calculateDate } from '../../utils';
 
 function Body() {
 	const dispatch = useDispatch();
@@ -41,7 +41,7 @@ function Body() {
 	};
 
 	return (
-		<Box border="1px" borderColor="gray.200" m={4}>
+		<Box m={4}>
 			<Topic />
 			<OfferingData />
 			<Flex justify="space-between">

@@ -1,12 +1,14 @@
 import { Header } from '../components/header';
-import { CardBody } from '../components/body';
+import { CardBody } from '../components/card';
 import { Container } from '@chakra-ui/react';
+import { ChartBody } from '../components/chart';
 
 function Main() {
 	return (
-		<Container border="1px" borderColor="gray.200" maxW="container.lg">
+		<Container maxW="container.lg" sx={{ height: '100vh' }}>
 			<Header />
 			<CardBody />
+			<ChartBody />
 		</Container>
 	);
 }
