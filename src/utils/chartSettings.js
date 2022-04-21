@@ -7,6 +7,7 @@ import {
 	Title,
 	Tooltip,
 	Legend,
+	Filler,
 } from 'chart.js';
 import { useSelector } from 'react-redux';
 import { calcChartDate } from './calculateDate';
@@ -18,7 +19,8 @@ ChartJS.register(
 	LineElement,
 	Title,
 	Tooltip,
-	Legend
+	Legend,
+	Filler
 );
 
 export const options = {
@@ -75,15 +77,17 @@ export function Datas(term) {
 				label: '확진자',
 				data: confirmed.map((item) => item[0]),
 				borderColor: '#FF0000',
-				backgroundColor: 'rgba(255, 0, 0, 0.5)',
+				backgroundColor: 'rgba(255, 0, 0, 0.2)',
 				yAxisID: 'y1',
+				fill: true,
 			},
 			{
 				label: '사망자',
 				data: confirmed.map((item) => item[1]),
 				borderColor: '#3290ED',
-				backgroundColor: 'rgba(50, 144, 237, 0.5)',
+				backgroundColor: 'rgba(50, 144, 237, 0.2)',
 				yAxisID: 'y',
+				fill: true,
 			},
 		],
 	};
