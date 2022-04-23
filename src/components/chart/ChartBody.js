@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { Box, Select } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import { options, Datas } from '../../utils';
 
@@ -13,6 +13,10 @@ function ChartBody() {
 	const handleOptions = (e) => {
 		setTerms(e.target.value);
 	};
+
+	const option = useMemo(() => {
+		return options();
+	}, []);
 
 	return (
 		<Box mx={4} my={20}>
@@ -33,7 +37,7 @@ function ChartBody() {
 					<option value="30">한달</option>
 				</Select>
 			</Box>
-			<Line options={options} data={Datas(terms)} />
+			<Line options={option} data={Datas(terms)} />
 		</Box>
 	);
 }
