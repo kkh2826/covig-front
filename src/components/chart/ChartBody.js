@@ -30,7 +30,7 @@ function ChartBody() {
 			>
 				<Select
 					width={'10rem'}
-					variant="flushed"
+					variant="filled"
 					borderColor={'#000000'}
 					onChange={handleOptions}
 				>
