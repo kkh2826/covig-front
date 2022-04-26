@@ -34,9 +34,10 @@ function ChartBody() {
 					borderColor={'#000000'}
 					onChange={handleOptions}
 				>
-					<option value="7">일주일</option>
-					<option value="14">2주</option>
-					<option value="30">한달</option>
+					<option value="7">1 Week</option>
+					<option value="14">2 Weeks</option>
+					<option value="21">3 Weeks</option>
+					<option value="30">1 Month</option>
 				</Select>
 			</Box>
 			<Line options={_options()} data={_data()} />
