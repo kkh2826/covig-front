@@ -4,17 +4,37 @@ export const calculateDate = () => {
 	const year = current.getFullYear();
 	const month = current.getMonth() + 1;
 	const date = current.getDate();
+	const hour = current.getHours();
+	const minute = current.getMinutes();
 
 	const currentDate = `${year}${month < 10 ? `0${month}` : month}${
 		date < 10 ? `0${date}` : date
 	}`;
 
-	return currentDate;
+	/* *
+	 * * API 미제공 시간대 컨트롤
+	 */
+	if (hour < 10 && minute < 31) {
+		return currentDate - 1;
+	} else {
+		return currentDate;
+	}
 };
 
 export const calcChartDate = (term, type) => {
 	const current = new Date();
-	const date = current.getDate();
+	const hour = current.getHours();
+	const minute = current.getMinutes();
+	let date = null;
+
+	/* *
+	 * * API 미제공 시간대 컨트롤
+	 */
+	if (hour < 10 && minute < 31) {
+		date = current.getDate() - 1;
+	} else {
+		date = current.getDate();
+	}
 
 	const termStore = [];
 
