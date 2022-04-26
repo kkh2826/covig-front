@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { Box, Select } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import { options, Datas } from '../../utils';
 
@@ -10,9 +10,15 @@ function ChartBody() {
 	 */
 	const [terms, setTerms] = useState(7);
 
-	const handleOptions = (e) => {
+	const handleOptions = useCallback((e) => {
 		setTerms(e.target.value);
-	};
+	}, []);
+
+	/**
+	 ** options는 객체, Datas는 함수
+	 */
+	const _options = useCallback(() => options, []);
+	const _data = useCallback(() => Datas(terms), [terms]);
 
 	return (
 		<Box mx={4} my={20}>
@@ -33,7 +39,7 @@ function ChartBody() {
 					<option value="30">한달</option>
 				</Select>
 			</Box>
-			<Line options={options} data={Datas(terms)} />
+			<Line options={_options} data={_data()} />
 		</Box>
 	);
 }
