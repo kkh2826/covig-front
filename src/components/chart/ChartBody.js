@@ -39,7 +39,7 @@ function ChartBody() {
 					<option value="30">한달</option>
 				</Select>
 			</Box>
-			<Line options={_options} data={_data()} />
+			<Line options={_options()} data={_data()} />
 		</Box>
 	);
 }
