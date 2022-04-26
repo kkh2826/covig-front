@@ -23,34 +23,36 @@ ChartJS.register(
 	Filler
 );
 
-export const options = {
-	responsive: true,
-	interaction: {
-		mode: 'index',
-		intersect: false,
-	},
-	stacked: false,
-	plugins: {
-		title: {
-			display: true,
-			text: '감염 현황 추이',
+export const options = () => {
+	return {
+		responsive: true,
+		interaction: {
+			mode: 'index',
+			intersect: false,
 		},
-	},
-	scales: {
-		y: {
-			type: 'linear',
-			display: false,
-			position: 'left',
-		},
-		y1: {
-			type: 'linear',
-			display: false,
-			position: 'right',
-			grid: {
-				drawOnChartArea: false,
+		stacked: false,
+		plugins: {
+			title: {
+				display: true,
+				text: '감염 현황 추이',
 			},
 		},
-	},
+		scales: {
+			y: {
+				type: 'linear',
+				display: false,
+				position: 'left',
+			},
+			y1: {
+				type: 'linear',
+				display: false,
+				position: 'right',
+				grid: {
+					drawOnChartArea: false,
+				},
+			},
+		},
+	};
 };
 
 /**
