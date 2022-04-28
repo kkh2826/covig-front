@@ -21,7 +21,13 @@ function ChartBody() {
 	const _data = useCallback(() => Datas(terms), [terms]);
 
 	return (
-		<Box mx={4} my={20}>
+		<Box
+			mx={4}
+			my={20}
+			p={5}
+			rounded={'lg'}
+			boxShadow={'0px 4px 15px 5px rgba(0, 0, 0, 0.25)'}
+		>
 			<Box
 				width={'100%'}
 				display={'flex'}
