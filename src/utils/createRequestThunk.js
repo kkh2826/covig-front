@@ -3,9 +3,11 @@ import { startLoading, finishLoading } from '../modules/loading';
 function createRequestThunk(type, request) {
 	const SUCCESS = `${type}_SUCCESS`;
 	const FAILURE = `${type}_FAILURE`;
+
 	return (params) => async (dispatch) => {
 		dispatch({ type });
 		dispatch(startLoading(type));
+
 		try {
 			const response = await request(params);
 			const payload = await response.data;
@@ -20,7 +22,6 @@ function createRequestThunk(type, request) {
 				payload: e,
 				error: true,
 			});
-			console.error(e);
 		} finally {
 			dispatch(finishLoading(type));
 		}
