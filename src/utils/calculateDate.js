@@ -14,7 +14,9 @@ export const calculateDate = () => {
 	/* *
 	 * * API 미제공 시간대 컨트롤
 	 */
-	if (hour < 10 && minute < 31) {
+	if (hour < 9) {
+		return currentDate - 1;
+	} else if (hour === 9 && minute <= 30) {
 		return currentDate - 1;
 	} else {
 		return currentDate;
@@ -25,12 +27,15 @@ export const calcChartDate = (term, type) => {
 	const current = new Date();
 	const hour = current.getHours();
 	const minute = current.getMinutes();
+
 	let date = null;
 
 	/* *
 	 * * API 미제공 시간대 컨트롤
 	 */
-	if (hour < 10 && minute < 31) {
+	if (hour < 9) {
+		date = current.getDate() - 1;
+	} else if (hour === 9 && minute <= 30) {
 		date = current.getDate() - 1;
 	} else {
 		date = current.getDate();
