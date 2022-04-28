@@ -16,10 +16,9 @@ import { numberFormat } from '../../utils';
 function RegionList() {
 	const data = useSelector((state) => state.covid.covidRegionInfo);
 	const lists = useSelector((state) => state.regionView.number);
-	console.log(data);
 
 	const gridItems = useCallback(
-		data?.map((item) => {
+		data?.slice(0, lists).map((item) => {
 			return (
 				<ListItem key={item.gubun}>
 					<Grid templateColumns="repeat(5, 1fr)" gap={6}>
@@ -81,7 +80,7 @@ function RegionList() {
 				</ListItem>
 			);
 		}),
-		[data]
+		[data, lists]
 	);
 
 	/* *

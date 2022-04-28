@@ -1,13 +1,20 @@
 import { Flex, Heading, Text } from '@chakra-ui/react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { regionExtend } from '../../modules/regionView';
+import { regionExtend, regionReduction } from '../../modules/regionView';
 
 function RegionHeader() {
+	const [toggle, setToggle] = useState('off');
 	const dispatch = useDispatch();
 
 	const handleLists = () => {
-		console.log('클릭');
-		dispatch(regionExtend());
+		if (toggle === 'off') {
+			dispatch(regionExtend());
+			setToggle('on');
+		} else {
+			dispatch(regionReduction());
+			setToggle('off');
+		}
 	};
 
 	return (
