@@ -15,7 +15,7 @@ import { numberFormat } from '../../utils';
 
 function RegionList() {
 	const data = useSelector((state) => state.covid.covidRegionInfo);
-	const lists = useSelector((state) => state.regionView.number);
+	const showAll = useSelector((state) => state.regionView.showAll);
 
 	const gridItems = useCallback(
 		data?.slice(lists).map((item) => {

@@ -8,16 +8,16 @@ export const regionExtend = createAction(EXTEND);
 export const regionReduction = createAction(REDUCTION);
 
 const initialState = {
-	number: 18,
+	showAll: false,
 };
 
 const regionView = handleActions(
 	{
 		[EXTEND]: (_) => ({
-			number: 0,
+			showAll: true,
 		}),
 		[REDUCTION]: (_) => ({
-			number: 18,
+			showAll: false,
 		}),
 	},
 	initialState
