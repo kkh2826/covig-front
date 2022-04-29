@@ -18,7 +18,7 @@ function RegionList() {
 	const lists = useSelector((state) => state.regionView.number);
 
 	const gridItems = useCallback(
-		data?.slice(0, lists).map((item) => {
+		data?.slice(lists).map((item) => {
 			return (
 				<ListItem key={item.gubun}>
 					<Grid templateColumns="repeat(5, 1fr)" gap={6}>
@@ -64,7 +64,12 @@ function RegionList() {
 							justifyContent="center"
 							color="#7B79FC"
 						>
-							{numberFormat(item.diffDeathCnt)}
+							<Stat>
+								<Center>
+									<StatArrow type="increase" />
+									{numberFormat(item.diffDeathCnt)}
+								</Center>
+							</Stat>
 						</GridItem>
 						<GridItem
 							w="100%"
