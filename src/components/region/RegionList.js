@@ -18,7 +18,7 @@ function RegionList() {
 	const showAll = useSelector((state) => state.regionView.showAll);
 
 	const gridItems = useCallback(() => {
-		const result = showAll ? data.length - 1 : 0;
+		const result = showAll ? 0 : data.length - 1;
 
 		return data?.slice(result).map((item) => {
 			return (
