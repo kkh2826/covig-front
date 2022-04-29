@@ -17,8 +17,10 @@ function RegionList() {
 	const data = useSelector((state) => state.covid.covidRegionInfo);
 	const showAll = useSelector((state) => state.regionView.showAll);
 
-	const gridItems = useCallback(
-		data?.slice(lists).map((item) => {
+	const gridItems = useCallback(() => {
+		const result = showAll ? data.length - 1 : 0;
+
+		return data?.slice(result).map((item) => {
 			return (
 				<ListItem key={item.gubun}>
 					<Grid templateColumns="repeat(5, 1fr)" gap={6}>
@@ -84,9 +86,8 @@ function RegionList() {
 					</Grid>
 				</ListItem>
 			);
-		}),
-		[data, lists]
-	);
+		});
+	}, [data, showAll]);
 
 	/* *
 	 * * 데이터 불러들이는 동안 로딩
@@ -95,7 +96,7 @@ function RegionList() {
 		return <Progress size="xs" colorScheme="cyan" isIndeterminate />;
 	}
 
-	return <List spacing={5}>{gridItems}</List>;
+	return <List spacing={5}>{gridItems()}</List>;
 }
 
 export default RegionList;
