@@ -14,10 +14,15 @@ export const calculateDate = () => {
 	/* *
 	 * * API 미제공 시간대 컨트롤
 	 */
-	if (hour < 9) {
-		return currentDate - 1;
-	} else if (hour === 9 && minute <= 30) {
-		return currentDate - 1;
+	if (hour < 9 || (hour === 9 && minute <= 30)) {
+		const yesterday = new Date(new Date().setDate(date - 1));
+		const _year = yesterday.getFullYear();
+		const _month = yesterday.getMonth() + 1;
+		const _date = yesterday.getDate();
+
+		return `${_year}${_month < 10 ? `0${_month}` : _month}${
+			_date < 10 ? `0${_date}` : _date
+		}`;
 	} else {
 		return currentDate;
 	}
