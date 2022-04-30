@@ -3522,6 +3522,11 @@ chart.js@^3.7.1:
   resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-3.7.1.tgz#0516f690c6a8680c6c707e31a4c1807a6f400ada"
   integrity sha512-8knRegQLFnPQAheZV8MjxIXc5gQEfDFD897BJgv/klO/vtIyFFmgMXrNfgrXpbTr/XbTturxRgxIXx/Y+ASJBA==
 
+chartjs-plugin-gradient@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/chartjs-plugin-gradient/-/chartjs-plugin-gradient-0.5.0.tgz#907b15102ce164fc32640d43f9c3bad2f5ae3fd5"
+  integrity sha512-VHys58pMPNYRXngCrN5kvQZb1EiAvl/BhU3G9wNXxf2hETWiPYgN63Ud6RK1hyST+nZdZ61x4us546djZX2rYQ==
+
 check-types@^11.1.1:
   version "11.1.2"
   resolved "https://registry.yarnpkg.com/check-types/-/check-types-11.1.2.tgz#86a7c12bf5539f6324eb0e70ca8896c0e38f3e2f"

@@ -11,6 +11,7 @@ import {
 } from 'chart.js';
 import { useSelector } from 'react-redux';
 import { calcChartDate } from './calculateDate';
+import gradient from 'chartjs-plugin-gradient';
 
 ChartJS.register(
 	CategoryScale,
@@ -20,7 +21,8 @@ ChartJS.register(
 	Title,
 	Tooltip,
 	Legend,
-	Filler
+	Filler,
+	gradient
 );
 
 export const options = {
@@ -77,7 +79,15 @@ export function Datas(term) {
 				label: '확진자',
 				data: confirmed.map((item) => item[0]),
 				borderColor: '#FF0000',
-				backgroundColor: 'rgba(255, 0, 0, 0.2)',
+				gradient: {
+					backgroundColor: {
+						axis: 'x',
+						colors: {
+							0: 'rgba(255, 75, 43, 0.6)',
+							5: 'rgba(255, 65, 108, 0.6)',
+						},
+					},
+				},
 				yAxisID: 'y1',
 				fill: true,
 			},
@@ -85,7 +95,16 @@ export function Datas(term) {
 				label: '사망자',
 				data: confirmed.map((item) => item[1]),
 				borderColor: '#3290ED',
-				backgroundColor: 'rgba(50, 144, 237, 0.2)',
+				gradient: {
+					backgroundColor: {
+						axis: 'x',
+						colors: {
+							0: 'rgba(127, 127, 213, 0.6)',
+							3: 'rgba(134, 168, 231, 0.6)',
+							6: 'rgba(145, 234, 228, 0.6)',
+						},
+					},
+				},
 				yAxisID: 'y',
 				fill: true,
 			},
