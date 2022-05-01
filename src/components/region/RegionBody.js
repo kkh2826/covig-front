@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux';
 import { getCovidRegionInfo } from '../../modules/covid';
 import RegionHeader from './RegionHeader';
 import RegionList from './RegionList';
-import RegionTypes from './RegionTypes';
 
 function RegionBody() {
 	const dispatch = useDispatch();
@@ -21,7 +20,6 @@ function RegionBody() {
 			boxShadow={'0px 4px 15px 5px rgba(0, 0, 0, 0.25)'}
 		>
 			<RegionHeader />
-			<RegionTypes />
 			<RegionList />
 		</Box>
 	);

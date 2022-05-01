@@ -20,7 +20,12 @@ function RegionHeader() {
 	return (
 		<Flex alignItems="center" justifyContent="space-between">
 			<Heading size="lg">시&middot;도별 현황</Heading>
-			<Text color="#4CAB02" onClick={handleLists} sx={{ cursor: 'pointer' }}>
+			<Text
+				fontWeight="bold"
+				color="rgba(0, 184, 148, 1)"
+				onClick={handleLists}
+				cursor="pointer"
+			>
 				{toggle === 'off' ? '전체 보기' : '축소 하기'}
 			</Text>
 		</Flex>

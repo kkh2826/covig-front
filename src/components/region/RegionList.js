@@ -1,13 +1,15 @@
-/* eslint-disable no-unused-vars */
 import {
-	Center,
-	Grid,
-	GridItem,
-	List,
-	ListItem,
 	Progress,
 	Stat,
 	StatArrow,
+	Table,
+	TableCaption,
+	TableContainer,
+	Tbody,
+	Td,
+	Th,
+	Thead,
+	Tr,
 } from '@chakra-ui/react';
 import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
@@ -17,74 +19,30 @@ function RegionList() {
 	const data = useSelector((state) => state.covid.covidRegionInfo);
 	const showAll = useSelector((state) => state.regionView.showAll);
 
-	const gridItems = useCallback(() => {
+	const tableItems = useCallback(() => {
 		const result = showAll ? 0 : data.length - 1;
 
 		return data?.slice(result).map((item) => {
+			const { gubun, incDec, defCnt, diffDeathCnt, deathCnt } = item;
+
 			return (
-				<ListItem key={item.gubun}>
-					<Grid templateColumns="repeat(5, 1fr)" gap={6}>
-						<GridItem
-							w="100%"
-							h="10"
-							display="flex"
-							alignItems="center"
-							justifyContent="center"
-						>
-							{item.gubun}
-						</GridItem>
-						<GridItem
-							w="100%"
-							h="10"
-							color="#FF6060"
-							display="flex"
-							alignItems="center"
-							justifyContent="center"
-						>
-							<Stat>
-								<Center>
-									<StatArrow type="increase" />
-									{numberFormat(item.incDec)}
-								</Center>
-							</Stat>
-						</GridItem>
-						<GridItem
-							w="100%"
-							h="10"
-							display="flex"
-							alignItems="center"
-							justifyContent="center"
-							color="#FF0000"
-						>
-							{numberFormat(item.defCnt)}
-						</GridItem>
-						<GridItem
-							w="100%"
-							h="10"
-							display="flex"
-							alignItems="center"
-							justifyContent="center"
-							color="#7B79FC"
-						>
-							<Stat>
-								<Center>
-									<StatArrow type="increase" />
-									{numberFormat(item.diffDeathCnt)}
-								</Center>
-							</Stat>
-						</GridItem>
-						<GridItem
-							w="100%"
-							h="10"
-							display="flex"
-							alignItems="center"
-							justifyContent="center"
-							color="#0500FF"
-						>
-							{numberFormat(item.deathCnt)}
-						</GridItem>
-					</Grid>
-				</ListItem>
+				<Tr key={gubun}>
+					<Td isNumeric>{gubun}</Td>
+					<Td isNumeric>
+						<Stat>
+							<StatArrow type="increase" />
+							{numberFormat(incDec)}
+						</Stat>
+					</Td>
+					<Td isNumeric>{numberFormat(defCnt)}</Td>
+					<Td isNumeric>
+						<Stat>
+							<StatArrow type="increase" />
+							{numberFormat(diffDeathCnt)}
+						</Stat>
+					</Td>
+					<Td isNumeric>{numberFormat(deathCnt)}</Td>
+				</Tr>
 			);
 		});
 	}, [data, showAll]);
@@ -96,7 +54,35 @@ function RegionList() {
 		return <Progress size="xs" colorScheme="cyan" isIndeterminate />;
 	}
 
-	return <List spacing={5}>{gridItems()}</List>;
+	return (
+		<TableContainer mt={5}>
+			<Table variant="striped">
+				<TableCaption placeContent="bottom">
+					우리 모두 힘내서 코로나를 이겨냅시다.
+				</TableCaption>
+				<Thead>
+					<Tr>
+						<Th isNumeric fontSize={'1.2rem'}>
+							시&middot;도명
+						</Th>
+						<Th isNumeric fontSize={'1.2rem'}>
+							일일 확진자
+						</Th>
+						<Th isNumeric fontSize={'1.2rem'}>
+							누적 확진자
+						</Th>
+						<Th isNumeric fontSize={'1.2rem'}>
+							일일 사망자
+						</Th>
+						<Th isNumeric fontSize={'1.2rem'}>
+							누적 사망자
+						</Th>
+					</Tr>
+				</Thead>
+				<Tbody>{tableItems()}</Tbody>
+			</Table>
+		</TableContainer>
+	);
 }
 
 export default RegionList;
