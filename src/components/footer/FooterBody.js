@@ -11,6 +11,7 @@ import {
 	Thead,
 	Tr,
 } from '@chakra-ui/react';
+
 import { AiFillGithub } from 'react-icons/ai';
 import { useTranslation } from 'react-i18next';
 
