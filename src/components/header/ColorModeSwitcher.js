@@ -8,6 +8,7 @@ function ColorModeSwitcher(props) {
 
 	return (
 		<IconButton
+			mt={1}
 			size="md"
 			fontSize="lg"
 			aria-label={`Switch to ${text} mode`}

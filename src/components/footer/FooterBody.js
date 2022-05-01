@@ -17,7 +17,12 @@ import { AiFillGithub } from 'react-icons/ai';
 
 function FooterBody() {
 	return (
-		<Center>
+		<Center
+			border={'1px solid black'}
+			width={'100vw'}
+			left="0"
+			position={'absolute'}
+		>
 			<Center
 				my={20}
 				p={5}
