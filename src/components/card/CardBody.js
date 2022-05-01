@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useEffect } from 'react';
 import { Topic, OfferingData, CovidCard } from './index';
 import { Box, Flex } from '@chakra-ui/react';

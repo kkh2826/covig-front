@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { Box, Select } from '@chakra-ui/react';
 import { useCallback, useState } from 'react';
 import { Line } from 'react-chartjs-2';

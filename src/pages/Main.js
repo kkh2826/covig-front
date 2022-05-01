@@ -3,6 +3,7 @@ import { CardBody } from '../components/card';
 import { Container } from '@chakra-ui/react';
 import { ChartBody } from '../components/chart';
 import { RegionBody } from '../components/region';
+import { FooterBody } from '../components/footer';
 
 function Main() {
 	return (
@@ -11,6 +12,7 @@ function Main() {
 			<CardBody />
 			<ChartBody />
 			<RegionBody />
+			<FooterBody />
 		</Container>
 	);
 }
