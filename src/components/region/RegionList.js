@@ -14,8 +14,10 @@ import {
 import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { numberFormat } from '../../utils';
+import { useTranslation } from 'react-i18next';
 
 function RegionList() {
+	const { t } = useTranslation(['page']);
 	const data = useSelector((state) => state.covid.covidRegionInfo);
 	const showAll = useSelector((state) => state.regionView.showAll);
 
@@ -27,7 +29,9 @@ function RegionList() {
 
 			return (
 				<Tr key={gubun}>
-					<Td isNumeric>{gubun}</Td>
+					<Td isNumeric>
+						{showAll ? t(`page:region.${gubun}`) : t('page:regionList.total')}
+					</Td>
 					<Td isNumeric>
 						<Stat>
 							<StatArrow type="increase" />
@@ -58,24 +62,24 @@ function RegionList() {
 		<TableContainer mt={5}>
 			<Table variant="striped">
 				<TableCaption placeContent="bottom">
-					우리 모두 힘내서 코로나를 이겨냅시다.
+					{t('page:regionList.text')}
 				</TableCaption>
 				<Thead>
 					<Tr>
-						<Th isNumeric fontSize={'1.2rem'}>
-							시&middot;도명
+						<Th isNumeric fontSize={'1.0rem'}>
+							{t('page:regionList.cities')}
 						</Th>
-						<Th isNumeric fontSize={'1.2rem'}>
-							일일 확진자
+						<Th isNumeric fontSize={'1.0rem'}>
+							{t('page:regionList.dailyConfirmed')}
 						</Th>
-						<Th isNumeric fontSize={'1.2rem'}>
-							누적 확진자
+						<Th isNumeric fontSize={'1.0rem'}>
+							{t('page:regionList.cumulativeConfirmed')}
 						</Th>
-						<Th isNumeric fontSize={'1.2rem'}>
-							일일 사망자
+						<Th isNumeric fontSize={'1.0rem'}>
+							{t('page:regionList.dailyDeath')}
 						</Th>
-						<Th isNumeric fontSize={'1.2rem'}>
-							누적 사망자
+						<Th isNumeric fontSize={'1.0rem'}>
+							{t('page:regionList.cumulativeDeath')}
 						</Th>
 					</Tr>
 				</Thead>

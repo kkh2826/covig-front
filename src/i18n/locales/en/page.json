@@ -1,0 +1,57 @@
+{
+	"languageOptions": {
+		"korean": "korean",
+		"english": "english"
+	},
+	"topicHeading": "Current status of infection in Korea",
+	"offeringData": "Data is provided by the Ministry of Health and Welfare and will be changed as of 9:30 a.m.",
+	"cardConfirmed": "Total Cumulative Confirmed Cases",
+	"cardDeaths": "Total Cumulative Deaths",
+	"chartOptions": {
+		"aWeek": "A Week",
+		"twoWeeks": "2 Weeks",
+		"threeWeeks": "3 Weeks",
+		"aMonth": "A Month"
+	},
+	"chartHeader": "Trends in infection status",
+	"chartValue": {
+		"confirmed": "Confirmed case",
+		"deaths": "The dead"
+	},
+	"regionHeader": {
+		"status": "Current status by city and province",
+		"viewExtend": "View all",
+		"viewReduction": "View part of list"
+	},
+	"regionList": {
+		"cities": "City name",
+		"dailyConfirmed": "Daily confirmed",
+		"cumulativeConfirmed": "Confirmed",
+		"dailyDeath": "daily Death",
+		"cumulativeDeath": "Death",
+		"text": "Let's all cheer up and overcome Covid-19.",
+		"total": "Total"
+	},
+	"region": {
+		"강원": "Gangwon",
+		"검역": "Quarantine",
+		"경기": "Gyeonggi",
+		"경남": "Gyeongnam",
+		"경북": "Gyeongbuk",
+		"광주": "Gwangju",
+		"대구": "Daegu",
+		"대전": "Daejeon",
+		"부산": "Busan",
+		"서울": "Seoul",
+		"세종": "Sejong",
+		"울산": "Ulsan",
+		"인천": "Incheon",
+		"전남": "Jeonnam",
+		"전북": "Jeonbuk",
+		"제주": "Jeju",
+		"충남": "Chungnam",
+		"충북": "Chungbuk",
+		"합계": "Total"
+	},
+	"footerMsg": "The website was created by COVIG developers."
+}

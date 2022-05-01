@@ -57,7 +57,7 @@ export const calcChartDate = (term, type) => {
 		let result = null;
 
 		if (type === 'label') {
-			result = `${_month}월 ${_date}일`;
+			result = `${_month} / ${_date}`;
 			termStore.push(result);
 		} else {
 			result = `${_year}${_month < 10 ? `0${_month}` : _month}${

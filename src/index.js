@@ -9,6 +9,7 @@ import rootReducer from './modules';
 import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
+import './i18n';
 
 const store = createStore(
 	rootReducer,

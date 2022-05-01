@@ -1,0 +1,57 @@
+{
+	"languageOptions": {
+		"korean": "한국어",
+		"english": "영어"
+	},
+	"topicHeading": "국내 감염 현황",
+	"offeringData": "데이터는 보건복지부로부터 제공받으며 오전 9시 30분을 기준으로 변경됩니다.",
+	"cardConfirmed": "전체 누적 확진자",
+	"cardDeaths": "전체 누적 사망자",
+	"chartOptions": {
+		"aWeek": "1 주",
+		"twoWeeks": "2 주",
+		"threeWeeks": "3 주",
+		"aMonth": "한 달"
+	},
+	"chartHeader": "감염 현황 추이",
+	"chartValue": {
+		"confirmed": "확진자",
+		"deaths": "사망자"
+	},
+	"regionHeader": {
+		"status": "시도별 현황",
+		"viewExtend": "전체 보기",
+		"viewReduction": "축소 하기"
+	},
+	"regionList": {
+		"cities": "시도명",
+		"dailyConfirmed": "일일 확진자",
+		"cumulativeConfirmed": "누적 확진자",
+		"dailyDeath": "일일 사망자",
+		"cumulativeDeath": "누적 사망자",
+		"text": "우리 모두 힘내서 코로나를 이겨냅시다.",
+		"total": "합계"
+	},
+	"region": {
+		"강원": "강원",
+		"검역": "검역",
+		"경기": "경기",
+		"경남": "경남",
+		"경북": "경북",
+		"광주": "광주",
+		"대구": "대구",
+		"대전": "대전",
+		"부산": "부산",
+		"서울": "서울",
+		"세종": "세종",
+		"울산": "을산",
+		"인천": "인천",
+		"전남": "전남",
+		"전북": "전북",
+		"제주": "제주",
+		"충남": "충남",
+		"충북": "충북",
+		"합계": "합계"
+	},
+	"footerMsg": "이 웹사이트는 COVIG 개발진들에 의해 만들어졌습니다."
+}

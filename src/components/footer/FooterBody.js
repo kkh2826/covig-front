@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import {
 	Center,
 	Icon,
@@ -8,18 +7,20 @@ import {
 	TableContainer,
 	Tbody,
 	Td,
-	Text,
 	Th,
 	Thead,
 	Tr,
 } from '@chakra-ui/react';
 import { AiFillGithub } from 'react-icons/ai';
+import { useTranslation } from 'react-i18next';
 
 function FooterBody() {
+	const { t } = useTranslation(['page']);
+
 	return (
 		<Center
-			border={'1px solid black'}
-			width={'100vw'}
+			border="1px solid black"
+			width={'100%'}
 			left="0"
 			position={'absolute'}
 		>
@@ -32,7 +33,7 @@ function FooterBody() {
 				<TableContainer>
 					<Table variant="simple">
 						<TableCaption placement="bottom">
-							이 웹사이트는 COVIG 개발진들에 의해 만들어졌습니다.
+							{t('page:footerMsg')}
 						</TableCaption>
 						<Thead>
 							<Tr>

@@ -12,6 +12,7 @@ import {
 import { useSelector } from 'react-redux';
 import { calcChartDate } from './calculateDate';
 import gradient from 'chartjs-plugin-gradient';
+import { useTranslation } from 'react-i18next';
 
 ChartJS.register(
 	CategoryScale,
@@ -25,40 +26,45 @@ ChartJS.register(
 	gradient
 );
 
-export const options = {
-	responsive: true,
-	interaction: {
-		mode: 'index',
-		intersect: false,
-	},
-	stacked: false,
-	plugins: {
-		title: {
-			display: true,
-			text: '감염 현황 추이',
+export function Options() {
+	const { t } = useTranslation(['page']);
+
+	return {
+		responsive: true,
+		interaction: {
+			mode: 'index',
+			intersect: false,
 		},
-	},
-	scales: {
-		y: {
-			type: 'linear',
-			display: false,
-			position: 'left',
-		},
-		y1: {
-			type: 'linear',
-			display: false,
-			position: 'right',
-			grid: {
-				drawOnChartArea: false,
+		stacked: false,
+		plugins: {
+			title: {
+				display: true,
+				text: t('page:chartHeader'),
 			},
 		},
-	},
-};
+		scales: {
+			y: {
+				type: 'linear',
+				display: false,
+				position: 'left',
+			},
+			y1: {
+				type: 'linear',
+				display: false,
+				position: 'right',
+				grid: {
+					drawOnChartArea: false,
+				},
+			},
+		},
+	};
+}
 
 /**
  ** covidState first value : null
  */
 export function Datas(term) {
+	const { t } = useTranslation(['page']);
 	const labels = calcChartDate(term, 'label');
 	const covidState = useSelector((state) => state.covid.covidBasicInfo);
 	const dateToStringArray = calcChartDate(term, 'states');
@@ -76,7 +82,7 @@ export function Datas(term) {
 		labels,
 		datasets: [
 			{
-				label: '확진자',
+				label: t('page:chartValue.confirmed'),
 				data: confirmed.map((item) => item[0]),
 				borderColor: '#FF9F1A',
 				gradient: {
@@ -94,7 +100,7 @@ export function Datas(term) {
 				fill: true,
 			},
 			{
-				label: '사망자',
+				label: t('page:chartValue.deaths'),
 				data: confirmed.map((item) => item[1]),
 				borderColor: '#40739e',
 				gradient: {

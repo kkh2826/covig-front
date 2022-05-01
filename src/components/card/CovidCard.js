@@ -12,14 +12,19 @@ import {
 	StatHelpText,
 	StatArrow,
 } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
+import { numberFormat } from '../../utils';
 
 function CovidCard({ title, total, addition, icon }) {
+	const { t } = useTranslation(['page']);
+
 	const leftSide = () => {
 		const extTotal = total.toLocaleString('ko-KR');
 
 		return (
 			<Flex
-				textAlign={'left'}
+				textAlign={'center'}
+				w={'200px'}
 				h={'170px'}
 				maxH={'170px'}
 				my={2}
@@ -27,8 +32,10 @@ function CovidCard({ title, total, addition, icon }) {
 				justify="space-between"
 			>
 				<Icon as={icon} w={12} h={12} />
-				<Heading as="h3" size="md" my={5}>
-					{title}
+				<Heading as="h3" size="md" my={2}>
+					{title === '전체 누적 확진자'
+						? t('page:cardConfirmed')
+						: t('page:cardDeaths')}
 				</Heading>
 				<Text fontSize="3xl" fontWeight={700}>
 					{extTotal}
@@ -57,8 +64,6 @@ function CovidCard({ title, total, addition, icon }) {
 	};
 
 	const stats = () => {
-		const extAddition = addition.toLocaleString('ko-KR');
-
 		return (
 			<Flex>
 				<Stat>
@@ -70,7 +75,7 @@ function CovidCard({ title, total, addition, icon }) {
 							type="increase"
 							color={title === '전체 누적 확진자' ? 'red.500' : '#504DFF'}
 						/>
-						{extAddition}
+						{numberFormat(addition)}
 					</StatHelpText>
 				</Stat>
 			</Flex>
