@@ -78,34 +78,37 @@ export function Datas(term) {
 			{
 				label: '확진자',
 				data: confirmed.map((item) => item[0]),
-				borderColor: '#FF0000',
+				borderColor: '#FF9F1A',
 				gradient: {
 					backgroundColor: {
 						axis: 'x',
 						colors: {
-							0: 'rgba(255, 75, 43, 0.6)',
-							50: 'rgba(255, 65, 108, 0.6)',
+							0: 'rgba(255, 175, 64, 0.5)',
+							50: 'rgba(255, 175, 64, 0.25)',
+							75: 'rgba(255, 175, 64, 0.1)',
+							100: 'rgba(255, 175, 64, 0)',
 						},
 					},
 				},
-				yAxisID: 'y1',
+				yAxisID: 'y',
 				fill: true,
 			},
 			{
 				label: '사망자',
 				data: confirmed.map((item) => item[1]),
-				borderColor: '#3290ED',
+				borderColor: '#40739e',
 				gradient: {
 					backgroundColor: {
 						axis: 'x',
 						colors: {
-							0: 'rgba(127, 127, 213, 0.6)',
-							30: 'rgba(134, 168, 231, 0.6)',
-							60: 'rgba(145, 234, 228, 0.6)',
+							0: 'rgba(72, 126, 176, 0.5)',
+							50: 'rgba(72, 126, 176, 0.25)',
+							75: 'rgba(72, 126, 176, 0.1)',
+							100: 'rgba(72, 126, 176, 0)',
 						},
 					},
 				},
-				yAxisID: 'y',
+				yAxisID: 'y1',
 				fill: true,
 			},
 		],
