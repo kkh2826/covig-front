@@ -15,7 +15,8 @@ function RegionBody() {
 	return (
 		<Box
 			p={5}
-			m={4}
+			mx={4}
+			my={20}
 			rounded={'lg'}
 			boxShadow={'0px 4px 15px 5px rgba(0, 0, 0, 0.25)'}
 		>

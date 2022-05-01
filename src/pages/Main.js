@@ -7,7 +7,7 @@ import { FooterBody } from '../components/footer';
 
 function Main() {
 	return (
-		<Container maxW="container.lg" sx={{ height: '100vh' }}>
+		<Container maxW="container.lg" sx={{ height: '100%' }}>
 			<HeaderBody />
 			<CardBody />
 			<ChartBody />
