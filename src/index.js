@@ -10,6 +10,7 @@ import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import './i18n';
+import { theme } from './utils';
 
 const store = createStore(
 	rootReducer,
@@ -18,7 +19,7 @@ const store = createStore(
 
 ReactDOM.render(
 	<React.StrictMode>
-		<ChakraProvider>
+		<ChakraProvider theme={theme}>
 			<Provider store={store}>
 				<App />
 			</Provider>
