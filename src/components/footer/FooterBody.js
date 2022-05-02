@@ -1,6 +1,6 @@
 import { Center, Icon, Link, Text } from '@chakra-ui/react';
 import { Box, Grid } from '@chakra-ui/react';
-import { AiFillGithub } from 'react-icons/ai';
+import Github from '@patternfly/react-icons/dist/esm/icons/github-icon';
 
 function FooterBody() {
 	return (
@@ -14,13 +14,13 @@ function FooterBody() {
 			<Grid templateColumns="repeat(2, 1fr)">
 				<Center gap={2}>
 					<Link href="https://github.com/po4tion/covig-front" isExternal>
-						<Icon as={AiFillGithub} w={8} h={8} />
+						<Icon as={Github} w={8} h={8} />
 					</Link>
 					<Text>po4tion0429@gmail.com</Text>
 				</Center>
 				<Center gap={2}>
 					<Link href="https://github.com/kkh2826/COVIG_Back" isExternal>
-						<Icon as={AiFillGithub} w={8} h={8} />
+						<Icon as={Github} w={8} h={8} />
 					</Link>
 					<Text>kkh2826@naver.com</Text>
 				</Center>

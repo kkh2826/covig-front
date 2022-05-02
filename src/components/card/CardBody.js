@@ -2,11 +2,11 @@
 import { useEffect } from 'react';
 import { Topic, OfferingData, CovidCard } from './index';
 import { Box, Flex } from '@chakra-ui/react';
-import { FaVirus } from 'react-icons/fa';
-import { GiDeadWood } from 'react-icons/gi';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCovidBasicInfo } from '../../modules/covid';
 import { calculateDate } from '../../utils';
+import FaVirus from '@patternfly/react-icons/dist/esm/icons/virus-icon';
+import BookDead from '@patternfly/react-icons/dist/esm/icons/book-dead-icon';
 
 function Body() {
 	const dispatch = useDispatch();
@@ -34,7 +34,7 @@ function Body() {
 					title="전체 누적 사망자"
 					total={+covidData.deathCnt}
 					addition={+covidData.DiffDeathCnt}
-					icon={GiDeadWood}
+					icon={BookDead}
 				/>
 			);
 		}
