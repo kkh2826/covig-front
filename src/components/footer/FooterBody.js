@@ -1,8 +1,11 @@
 import { Center, Icon, Link, Text } from '@chakra-ui/react';
-import { Box, Grid } from '@chakra-ui/react';
+import { Box, Grid, useMediaQuery } from '@chakra-ui/react';
 import Github from '@patternfly/react-icons/dist/esm/icons/github-icon';
 
 function FooterBody() {
+	const [isLargerThan550] = useMediaQuery('(max-width: 550px)');
+	console.log(isLargerThan550);
+
 	return (
 		<Box
 			mx={4}
@@ -11,7 +14,9 @@ function FooterBody() {
 			rounded={'lg'}
 			boxShadow={'0px 4px 15px 5px rgba(0, 0, 0, 0.25)'}
 		>
-			<Grid templateColumns="repeat(2, 1fr)">
+			<Grid
+				templateColumns={isLargerThan550 ? 'repeat(1, 1fr)' : 'repeat(2, 1fr)'}
+			>
 				<Center gap={2}>
 					<Link href="https://github.com/po4tion/covig-front" isExternal>
 						<Icon as={Github} w={8} h={8} />
