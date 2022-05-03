@@ -4,7 +4,6 @@ import Github from '@patternfly/react-icons/dist/esm/icons/github-icon';
 
 function FooterBody() {
 	const [isLargerThan550] = useMediaQuery('(max-width: 550px)');
-	console.log(isLargerThan550);
 
 	return (
 		<Box
