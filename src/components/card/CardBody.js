@@ -12,7 +12,8 @@ function Body() {
 	const [isLargerThan750] = useMediaQuery('(max-width: 750px)');
 	const dispatch = useDispatch();
 	const data = useSelector((state) => state.covid.covidBasicInfo);
-
+	console.log(data);
+	console.log(calculateDate());
 	useEffect(() => {
 		dispatch(getCovidBasicInfo());
 	}, []);
@@ -51,12 +52,12 @@ function Body() {
 				align={isLargerThan750 ? 'center' : 'inherit'}
 				gap={isLargerThan750 ? 10 : 0}
 			>
-				{data && (
+				{/* {data && (
 					<>
 						{card('decide')}
 						{card('death')}
 					</>
-				)}
+				)} */}
 			</Flex>
 		</Box>
 	);
