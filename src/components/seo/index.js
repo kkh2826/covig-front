@@ -20,10 +20,6 @@ function SEO() {
 			<meta property="og:description" content={desc} />
 			<meta name="google-site-verification" content={desc} />
 			<meta name="naver-site-verification" content={desc} />
-			<meta
-				httpEquiv="Content-Security-Policy"
-				content="upgrade-insecure-requests"
-			/>
 		</Helmet>
 	);
 }
