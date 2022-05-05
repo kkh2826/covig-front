@@ -12,7 +12,7 @@ function Body() {
 	const [isLargerThan750] = useMediaQuery('(max-width: 750px)');
 	const dispatch = useDispatch();
 	const data = useSelector((state) => state.covid.covidBasicInfo);
-	console.log(data);
+	console.log('데이터 확인:', data);
 	console.log(calculateDate());
 	useEffect(() => {
 		dispatch(getCovidBasicInfo());
