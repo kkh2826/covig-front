@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useEffect } from 'react';
 import { Topic, OfferingData, CovidCard } from './index';
 import { Box, Flex, useMediaQuery } from '@chakra-ui/react';
@@ -52,12 +51,12 @@ function Body() {
 				align={isLargerThan750 ? 'center' : 'inherit'}
 				gap={isLargerThan750 ? 10 : 0}
 			>
-				{/* {data && (
+				{data && (
 					<>
 						{card('decide')}
 						{card('death')}
 					</>
-				)} */}
+				)}
 			</Flex>
 		</Box>
 	);
