@@ -80,5 +80,6 @@
 		"development": [
 			"last 1 chrome version"
 		]
-	}
+	},
+	"proxy": "https://www.covigback.com"
 }

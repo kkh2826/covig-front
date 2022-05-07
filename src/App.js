@@ -9,9 +9,7 @@ import './App.css';
 
 function App() {
 	const calling = async () => {
-		await axios
-			.get('https://www.covigback.com/api/covidBasicinfo/')
-			.then((data) => console.log(data));
+		await axios.get('/api/covidBasicinfo/').then((data) => console.log(data));
 	};
 
 	useEffect(async () => {
