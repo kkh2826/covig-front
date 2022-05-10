@@ -9,8 +9,8 @@ import {
 	Icon,
 	Text,
 	Stat,
-	StatHelpText,
 	StatArrow,
+	StatNumber,
 } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import { numberFormat } from '../../utils';
@@ -68,8 +68,7 @@ function CovidCard({ title, total, addition, icon }) {
 		return (
 			<Flex>
 				<Stat>
-					<StatHelpText
-						fontSize={'xl'}
+					<StatNumber
 						color={title === '전체 누적 확진자' ? 'red.500' : '#504DFF'}
 					>
 						<StatArrow
@@ -77,7 +76,7 @@ function CovidCard({ title, total, addition, icon }) {
 							color={title === '전체 누적 확진자' ? 'red.500' : '#504DFF'}
 						/>
 						{numberFormat(addition)}
-					</StatHelpText>
+					</StatNumber>
 				</Stat>
 			</Flex>
 		);

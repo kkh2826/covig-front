@@ -1,5 +1,12 @@
-import { Center, Icon, Link, Text } from '@chakra-ui/react';
-import { Box, Grid, useMediaQuery } from '@chakra-ui/react';
+import {
+	Box,
+	Grid,
+	useMediaQuery,
+	Center,
+	Icon,
+	Link,
+	Text,
+} from '@chakra-ui/react';
 import Github from '@patternfly/react-icons/dist/esm/icons/github-icon';
 
 function FooterBody() {
@@ -17,13 +24,21 @@ function FooterBody() {
 				templateColumns={isLargerThan550 ? 'repeat(1, 1fr)' : 'repeat(2, 1fr)'}
 			>
 				<Center gap={2}>
-					<Link href="https://github.com/po4tion/covig-front" isExternal>
+					<Link
+						href="https://github.com/po4tion/covig-front"
+						isExternal
+						aria-label="Github Link Icon Front"
+					>
 						<Icon as={Github} w={8} h={8} />
 					</Link>
 					<Text>po4tion0429@gmail.com</Text>
 				</Center>
 				<Center gap={2}>
-					<Link href="https://github.com/kkh2826/COVIG_Back" isExternal>
+					<Link
+						href="https://github.com/kkh2826/COVIG_Back"
+						isExternal
+						aria-label="Github Link Icon Back"
+					>
 						<Icon as={Github} w={8} h={8} />
 					</Link>
 					<Text>kkh2826@naver.com</Text>
