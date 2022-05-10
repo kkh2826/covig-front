@@ -12,6 +12,14 @@
 
 ### 🏠 [COVIG으로 이동](https://covig.vercel.app/)
 
+<br />
+
+## Lighthouse 성능 측정
+
+![lighthouse](./public/Lighthouse-Total.png)
+
+<br />
+
 ## 목차
 
 1. [COVIG](#COVIG)
@@ -23,9 +31,13 @@
 7. [개발자](#개발자)
 8. [제보사항](#제보사항)
 
+<br />
+
 ## COVIG
 
 현재 국내 covid-19 상황을 한눈에 볼 수 있도록 만든 React 기반의 Website 입니다. React, Redux, Chakra UI에 집중하여 개발하였습니다. Django 백엔드 1분과 협업을 하였고 코드 리뷰의 중요성을 알 수 있었던 프로젝트 입니다.
+
+<br />
 
 ## 설명
 
@@ -34,6 +46,8 @@
 - Chakra UI를 통해 웹 UI 전체 페이지 적용
 - 다국어(한국어, 영어) 지원
 - Chart.js 사용으로 시각적 효과 증가
+
+<br />
 
 ## 주요 사용 기술
 
@@ -44,10 +58,14 @@
 - React-i18next
 - Chakra UI
 
+<br />
+
 ## 배포 환경
 
 - Front 배포 환경 : Vercel
 - Server 배포 환경 : Aws
+
+<br />
 
 ## 제공 기능
 
@@ -57,6 +75,8 @@
 4. 지역별 확진자와 사망자 (일일 / 누적 정보 제공)
 5. 차트 기능 (1주, 2주, 3주, 한달 정보 제공)
 6. 개발자 정보
+
+<br />
 
 ## 폴더 관리
 
@@ -70,6 +90,8 @@
 | utils      | 재사용 가능한 유틸성 파일 관리 |
 | public     | images favicon robots          |
 
+<br />
+
 ## 개발자
 
 1. Frontend
@@ -81,6 +103,8 @@
    👤 **Kim KyoungHoon <kkh2826@naver.com>**
 
 - Github: [@kkh2826](https://github.com/kkh2826)
+
+<br />
 
 ## 제보사항
 
