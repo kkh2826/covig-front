@@ -52,9 +52,10 @@ function CovidCard({ title, total, addition, icon }) {
 
 		return (
 			<CircularProgress
-				value={percentage * 30}
+				value={(percentage * 30).toFixed(2)}
 				color={title === '전체 누적 확진자' ? 'red.500' : '#504DFF'}
 				size={'2.5em'}
+				aria-label={title}
 			>
 				<CircularProgressLabel fontSize={'lg'} fontWeight={700}>
 					{`${percentage}%`}
