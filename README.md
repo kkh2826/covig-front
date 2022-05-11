@@ -14,6 +14,10 @@
 
 AWS 비용문제로 배포중단했습니다.
 
+## 웹 작동 동영상
+
+[YouTube로 이동](https://www.youtube.com/watch?v=htIcRam5eqA)
+
 <br />
 
 ## Lighthouse 성능 측정
