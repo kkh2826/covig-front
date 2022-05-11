@@ -10,7 +10,9 @@
 
 > Covid-19 정보 제공
 
-### 🏠 [COVIG으로 이동](https://covig.vercel.app/)
+### 🏠 [~~COVIG으로 이동~~](https://github.com/po4tion/covig-front)
+
+AWS 비용문제로 배포중단했습니다.
 
 <br />
 
