@@ -16,13 +16,13 @@ AWS 비용문제로 배포중단했습니다.
 
 ## 웹 작동 동영상
 
-[YouTube로 이동](https://www.youtube.com/watch?v=htIcRam5eqA)
+[YouTube로 이동](https://www.youtube.com/watch?v=htIcRam5eqA){:target="\_blank"}
 
 <br />
 
 ## Figma 설계
 
-[Figma로 이동](https://www.figma.com/file/nzGvmvaLLitNDiRREsBe6v/Covig-Layout)
+[Figma로 이동](https://www.figma.com/file/nzGvmvaLLitNDiRREsBe6v/Covig-Layout){:target="\_blank"}
 
 <br />
 
