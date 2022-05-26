@@ -24,6 +24,10 @@ AWS 비용문제로 배포중단했습니다.
 
 ![lighthouse](./public/Lighthouse-Total.png)
 
+## Figma 설계
+
+![Figma로 이동](https://www.figma.com/file/nzGvmvaLLitNDiRREsBe6v/Covig-Layout)
+
 <br />
 
 ## 목차
